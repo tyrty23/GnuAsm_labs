@@ -2,15 +2,20 @@
 #define N 5
 
 #define PRINT_(arr,type)\
-    float x1 = -8.0f/5.0f;\
-    double x2 = -8.0/5.0;\
     std::cout << "\n"#arr " in decimal: "; \
     if (typeid(arr[0])==typeid(x1) || typeid(arr[0]) ==typeid(x2)){\
-            \
+        for (int i = 0; i < N; i++) { printf("%.2f ", arr[i]); } \
+        std::cout << std::endl; \
+        std::cout << "\n"#arr " in exp: "; \
+        for (int i = 0; i < N; i++) { printf("%.2e ", arr[i]); } \
     }\
     else{\
-        printf("%lld, %lld, %lld, %lld, %lld\n",arr[0],arr[1],arr[2],arr[3],arr[4]) ;   \
-    } 
+        for (int i = 0; i < N; i++) { printf("%lld ", static_cast<long long>(arr[i])); } \
+        std::cout << std::endl; \
+        std::cout << "\n"#arr " in hex: "; \
+        for (int i = 0; i < N; i++) { printf("%#0*llx ", (int)(sizeof(type)*2 + 2), static_cast<long long>(arr[i]));} \
+    } \
+    std::cout << std::endl;
 
 int main(){
     int xs=0xFADE;
@@ -24,12 +29,12 @@ int main(){
     float Mfs[N]{x1,x1,x1,x1,x1};
     double Mfl[N]{x2,x2,x2,x2,x2};
 
-    std::cout<<Ms[0];//нужны временно, чтоб компилировалось
-    std::cout<<Ml[0];
-    std::cout<<Mq[0];
-    std::cout<<Mfs[0];
-    std::cout<<Mfl[0];
 
+    PRINT_(Ms,int);
     PRINT_(Ml,long long);
+    PRINT_(Mq,long long);
+    PRINT_(Mfs,float);
+    PRINT_(Mfl,double);
+
     return 0;
 }
