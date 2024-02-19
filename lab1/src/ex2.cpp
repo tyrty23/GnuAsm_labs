@@ -1,7 +1,7 @@
 #include <cstddef>
 #include <iostream>
 #define print_size(type)\
-    std::cout<<"The size of a" #type"is: "<< sizeof(type)<<" bytes"<<std::endl;
+    std::cout<<"The size of a " #type" is: "<< sizeof(type)<<" bytes"<<std::endl;
 
 
 int main(){
