@@ -188,28 +188,7 @@ The size of a size_t is: 8 bytes
 The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
 ```
-```
-Процессор x86-64
-OC MS Microsoft, 64 версия 
-Компилятор GCC(MinGW)
 
-The size of a char is: 1 bytes
-The size of a signed char is: 1 bytes
-The size of a unsigned char is: 1 bytes
-The size of a char * is: 8 bytes
-The size of a bool is: 1 bytes
-The size of a wchar_t is: 2 bytes
-The size of a short is: 2 bytes
-The size of a int is: 4 bytes
-The size of a long is: 4 bytes
-The size of a long long is: 8 bytes
-The size of a float is: 4 bytes
-The size of a double is: 8 bytes
-The size of a long double is: 16 bytes
-The size of a size_t is: 8 bytes
-The size of a ptrdiff_t is: 8 bytes
-The size of a void * is: 8 bytes
-```
 ### Задание Л1.з4. 
 Разработайте программу на языке C/C++, создающую массивы
 из 𝑁 = 5 чисел и инициализирующую их 𝑁 одинаковыми значениями 𝑥:
