@@ -118,8 +118,8 @@ The size of a void * is: 8 bytes
 Обратите внимание на размеры целочисленных типов и типов с плавающей
 запятой. Какие из них на всех платформах таблицы Л1.1 имеют разрядность 16,
 32, 64 бита, учитывая, что байт x86/x86-64 — октет (8 бит)?
-
->OC MS Microsoft, 64 версия
+```
+OC MS Microsoft, 64 версия
 Компилятор Microsoft
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
@@ -137,8 +137,9 @@ The size of a long double is: 8 bytes
 The size of a size_t is: 4 bytes
 The size of a ptrdiff_t is: 4 bytes
 The size of a void* is: 4 bytes
-
->OC MS Microsoft, 64 версия 
+```
+```
+OC MS Microsoft, 64 версия 
 Компилятор GCC (MinGW)
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
@@ -156,7 +157,7 @@ The size of a long double is: 16 bytes
 The size of a size_t is: 8 bytes
 The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
-
+```
 
 ### Задание Л1.з4. 
 Разработайте программу на языке C/C++, создающую массивы
