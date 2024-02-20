@@ -1,20 +1,19 @@
 #include <iostream>
 #define N 5
 
-#define PRINT_(arr,type)\
-    std::cout << "\n"#arr " in decimal: "; \
-    if (typeid(arr[0])==typeid(x1) || typeid(arr[0]) ==typeid(x2)){\
-        for (int i = 0; i < N; i++) { printf("%.2f ", arr[i]); } \
-        std::cout << std::endl; \
-        std::cout << "\n"#arr " in exp: "; \
-        for (int i = 0; i < N; i++) { printf("%.2e ", arr[i]); } \
-    }\
-    else{\
-        for (int i = 0; i < N; i++) { printf("%lld ", static_cast<long long>(arr[i])); } \
-        std::cout << std::endl; \
-        std::cout << "\n"#arr " in hex: "; \
-        for (int i = 0; i < N; i++) { printf("%#0*llx ", (int)(sizeof(type)*2 + 2), static_cast<long long>(arr[i]));} \
-    } \
+
+#define PRINT_f(arr,type)\
+    std::cout << "\n\n"#arr " in decimal: "; \
+    for (int i = 0; i < N; i++) { printf("%.2f ", arr[i]); } \
+    std::cout << "\n\n"#arr " in exp:     "; \
+    for (int i = 0; i < N; i++) { printf("%.2e ", arr[i]); } \
+    std::cout<<std::endl;
+
+#define PRINT_i(arr,type)\
+    std::cout << "\n\n"#arr " in decimal: "; \
+    for (int i = 0; i < N; i++) { printf("%lld ", static_cast<long long>(arr[i])); } \
+    std::cout << "\n"#arr " in hex:     "; \
+    for (int i = 0; i < N; i++) { printf("%#0*llx ", (int)(sizeof(type)*2 + 2), static_cast<long long>(arr[i]));} \
     std::cout << std::endl;
 
 int main(){
@@ -30,11 +29,13 @@ int main(){
     double Mfl[N]{x2,x2,x2,x2,x2};
 
 
-    PRINT_(Ms,int);
-    PRINT_(Ml,long long);
-    PRINT_(Mq,long long);
-    PRINT_(Mfs,float);
-    PRINT_(Mfl,double);
+    PRINT_i(Ms,int);
+    PRINT_i(Ml,long long);
+    PRINT_i(Mq,long long);
+    PRINT_f(Mfs,float);
+    PRINT_f(Mfl,double);
 
     return 0;
 }
+        
+
