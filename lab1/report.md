@@ -80,7 +80,8 @@ int main(){
     return 0;
 }
 ```
->Ubuntu 22.04 LTS, 64 битная версия
+```
+Ubuntu 22.04 LTS, 64 битная версия
 Компилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 AMD® Ryzen 7 5800h, x86 -64, процессор общего назначения
 The size of a char is: 1 bytes
@@ -99,7 +100,7 @@ The size of a long double is: 16 bytes
 The size of a size_t is: 8 bytes
 The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
-
+```
 ###Задание Л1.з3. Бонус +2 балла. 
 Выполните измерения согласно заданию Л1.з2 на платформах, доступных на ВЦ (таблица Л1.1).
 ![Текст описания](pic//pic1.png)
@@ -117,6 +118,46 @@ The size of a void * is: 8 bytes
 Обратите внимание на размеры целочисленных типов и типов с плавающей
 запятой. Какие из них на всех платформах таблицы Л1.1 имеют разрядность 16,
 32, 64 бита, учитывая, что байт x86/x86-64 — октет (8 бит)?
+```
+OC MS Microsoft, 64 версия
+Компилятор Microsoft
+The size of a char is: 1 bytes
+The size of a signed char is: 1 bytes
+The size of a unsigned char is: 1 bytes
+The size of a char* is: 4 bytes
+The size of a bool is: 1 bytes
+The size of a wchar_t is: 2 bytes
+The size of a short is: 2 bytes
+The size of a int is: 4 bytes
+The size of a long is: 4 bytes
+The size of a long long is: 8 bytes
+The size of a float is: 4 bytes
+The size of a double is: 8 bytes
+The size of a long double is: 8 bytes
+The size of a size_t is: 4 bytes
+The size of a ptrdiff_t is: 4 bytes
+The size of a void* is: 4 bytes
+```
+```
+OC MS Microsoft, 64 версия 
+Компилятор GCC (MinGW)
+The size of a char is: 1 bytes
+The size of a signed char is: 1 bytes
+The size of a unsigned char is: 1 bytes
+The size of a char * is: 8 bytes
+The size of a bool is: 1 bytes
+The size of a wchar_t is: 2 bytes
+The size of a short is: 2 bytes
+The size of a int is: 4 bytes
+The size of a long is: 4 bytes
+The size of a long long is: 8 bytes
+The size of a float is: 4 bytes
+The size of a double is: 8 bytes
+The size of a long double is: 16 bytes
+The size of a size_t is: 8 bytes
+The size of a ptrdiff_t is: 8 bytes
+The size of a void * is: 8 bytes
+```
 
 ### Задание Л1.з4. 
 Разработайте программу на языке C/C++, создающую массивы
