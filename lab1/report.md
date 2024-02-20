@@ -139,7 +139,6 @@ The size of a void* is: 4 bytes
 
 >OC MS Microsoft, 64 версия 
 Компилятор GCC (MinGW)
-
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
 The size of a unsigned char is: 1 bytes
