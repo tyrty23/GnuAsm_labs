@@ -84,6 +84,7 @@ int main(){
 Ubuntu 22.04 LTS, 64 битная версия
 Компилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 AMD® Ryzen 7 5800h, x86 -64, процессор общего назначения
+
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
 The size of a unsigned char is: 1 bytes
@@ -121,6 +122,7 @@ The size of a void * is: 8 bytes
 ```
 OC MS Microsoft, 64 версия
 Компилятор Microsoft
+
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
 The size of a unsigned char is: 1 bytes
@@ -141,6 +143,7 @@ The size of a void* is: 4 bytes
 ```
 OC MS Microsoft, 64 версия 
 Компилятор GCC (MinGW)
+
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
 The size of a unsigned char is: 1 bytes
@@ -182,6 +185,7 @@ The size of a void * is: 8 bytes
 ```
 OC MS Microsoft, 64 версия 
 Компилятор GCC(MinGW)
+
 The size of a char is: 1 bytes
 The size of a signed char is: 1 bytes
 The size of a unsigned char is: 1 bytes
