@@ -120,6 +120,7 @@ The size of a void * is: 8 bytes
 запятой. Какие из них на всех платформах таблицы Л1.1 имеют разрядность 16,
 32, 64 бита, учитывая, что байт x86/x86-64 — октет (8 бит)?
 ```
+Процессор x86-64
 OC MS Microsoft, 64 версия
 Компилятор Microsoft
 
@@ -141,6 +142,7 @@ The size of a ptrdiff_t is: 4 bytes
 The size of a void* is: 4 bytes
 ```
 ```
+Процессор x86-64
 OC MS Microsoft, 64 версия 
 Компилятор GCC (MinGW)
 
@@ -162,6 +164,7 @@ The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
 ```
 ```
+Процессор x86-64
 OC GNU/Linux, 64 версия
 Компилятор clang 17.0.1
 
@@ -183,6 +186,7 @@ The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
 ```
 ```
+Процессор x86-64
 OC MS Microsoft, 64 версия 
 Компилятор GCC(MinGW)
 
