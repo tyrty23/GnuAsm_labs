@@ -80,7 +80,8 @@ int main(){
     return 0;
 }
 ```
->Ubuntu 22.04 LTS, 64 битная версия
+```
+Ubuntu 22.04 LTS, 64 битная версия
 Компилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 AMD® Ryzen 7 5800h, x86 -64, процессор общего назначения
 The size of a char is: 1 bytes
@@ -99,7 +100,7 @@ The size of a long double is: 16 bytes
 The size of a size_t is: 8 bytes
 The size of a ptrdiff_t is: 8 bytes
 The size of a void * is: 8 bytes
-
+```
 ###Задание Л1.з3. Бонус +2 балла. 
 Выполните измерения согласно заданию Л1.з2 на платформах, доступных на ВЦ (таблица Л1.1).
 ![Текст описания](pic//pic1.png)
