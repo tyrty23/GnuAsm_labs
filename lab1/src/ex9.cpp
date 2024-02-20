@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
+#define N 100
 
 int main() {
     setlocale(LC_ALL, "russian");
 
-    char s1[100], s2[100], s3[100];
+    char s1[N], s2[N], s3[N];
 
     printf("Введите слово s1: ");
-    scanf_s("%s", s1);
+    scanf("%s", s1);
 
     printf("Введите слово s2 (не более 99 символов): ");
-    scanf_s("%99s", s2);
+    scanf("%99s", s2);
 
     while (getchar() != '\n'); // Clear input buffer
 

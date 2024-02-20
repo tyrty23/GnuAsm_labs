@@ -8,3 +8,8 @@ add_executable(ex1 src/ex1.cpp)
 add_executable(ex2 src/ex2.cpp)
 add_executable(ex4 src/ex4.cpp)
 add_executable(ex5 src/ex5.cpp)
+add_executable(ex6 src/ex6.cpp)
+add_executable(ex7 src/ex7.cpp)
+add_executable(ex8 src/ex8.cpp)
+add_executable(ex9 src/ex9.cpp)
+

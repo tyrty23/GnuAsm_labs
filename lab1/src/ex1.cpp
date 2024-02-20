@@ -3,7 +3,7 @@
 #include <cstring>
 
 #include <locale.h>
-int main (void)
+int main ()
 { 
    setlocale(LC_ALL,"russian");
    char str[150];

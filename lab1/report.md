@@ -503,11 +503,12 @@ int main(){
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
+#define N 100
 
 int main() {
     setlocale(LC_ALL, "russian");
 
-    char s1[100], s2[100], s3[100];
+    char s1[N], s2[N], s3[N];
 
     printf("Введите слово s1: ");
     scanf("%s", s1);
@@ -527,6 +528,7 @@ int main() {
 
     return 0;
 }
+
 
 ```
 
