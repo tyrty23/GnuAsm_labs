@@ -5,7 +5,7 @@
 #define PRINT_f(arr,type)\
     std::cout << "\n\n"#arr " in decimal: "; \
     for (int i = 0; i < N; i++) { printf("%.2f ", arr[i]); } \
-    std::cout << "\n\n"#arr " in exp:     "; \
+    std::cout << "\n"#arr " in exp:     "; \
     for (int i = 0; i < N; i++) { printf("%.2e ", arr[i]); } \
     std::cout<<std::endl;
 

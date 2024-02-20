@@ -40,6 +40,65 @@ float, double, long double, size_t, ptrdiff_t, void*.
 **Бонус** +2 балла, если при помощи макроса пояснения выводятся так, что
 в коде каждое имя типа в Л1.з2 встречается единожды.
 
+```c++
+#include <cstddef>
+#include <iostream>
+#define print_size(type)\
+    std::cout<<"The size of a " #type" is: "<< sizeof(type)<<" bytes"<<std::endl;
+
+
+int main(){
+    // Ubuntu 22.04 LTS, 64 битная версия
+    // компилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    // 
+    // AMD® Ryzen 7 5800h
+    // x86 -64 , процессор общего назначения
+
+
+    std::cout  
+        <<"Ubuntu 22.04 LTS, 64 битная версия"
+        <<"\nКомпилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0"
+        <<"\nAMD® Ryzen 7 5800h, x86 -64, процессор общего назначения"
+        <<std::endl;
+    std::cout<<std::endl;
+    print_size(char);
+    print_size(signed char);
+    print_size(unsigned char);
+    print_size(char *);
+    print_size(bool);
+    print_size(wchar_t);
+    print_size(short);
+    print_size(int);
+    print_size(long);
+    print_size(long long);
+    print_size(float);
+    print_size(double);
+    print_size(long double);
+    print_size(size_t);
+    print_size(ptrdiff_t);
+    print_size(void *);
+    return 0;
+}
+```
+>Ubuntu 22.04 LTS, 64 битная версия
+Компилятор g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+AMD® Ryzen 7 5800h, x86 -64, процессор общего назначения
+The size of a char is: 1 bytes
+The size of a signed char is: 1 bytes
+The size of a unsigned char is: 1 bytes
+The size of a char * is: 8 bytes
+The size of a bool is: 1 bytes
+The size of a wchar_t is: 4 bytes
+The size of a short is: 2 bytes
+The size of a int is: 4 bytes
+The size of a long is: 8 bytes
+The size of a long long is: 8 bytes
+The size of a float is: 4 bytes
+The size of a double is: 8 bytes
+The size of a long double is: 16 bytes
+The size of a size_t is: 8 bytes
+The size of a ptrdiff_t is: 8 bytes
+The size of a void * is: 8 bytes
 
 ###Задание Л1.з3. Бонус +2 балла. 
 Выполните измерения согласно заданию Л1.з2 на платформах, доступных на ВЦ (таблица Л1.1).
@@ -97,6 +156,67 @@ float, double, long double, size_t, ptrdiff_t, void*.
 шаблон и принимает тип как параметр шаблона, а адрес начала 𝑀 , длину 𝑁 и фор-
 маты с модификатором размера как параметры функции;
  +3 балла, если вывод описан как единый для всех массивов макрос с соответствующими параметрами.
+
+```c++
+#include <iostream>
+#define N 5
+
+
+#define PRINT_f(arr,type)\
+    std::cout << "\n\n"#arr " in decimal: "; \
+    for (int i = 0; i < N; i++) { printf("%.2f ", arr[i]); } \
+    std::cout << "\n"#arr " in exp:     "; \
+    for (int i = 0; i < N; i++) { printf("%.2e ", arr[i]); } \
+    std::cout<<std::endl;
+
+#define PRINT_i(arr,type)\
+    std::cout << "\n\n"#arr " in decimal: "; \
+    for (int i = 0; i < N; i++) { printf("%lld ", static_cast<long long>(arr[i])); } \
+    std::cout << "\n"#arr " in hex:     "; \
+    for (int i = 0; i < N; i++) { printf("%#0*llx ", (int)(sizeof(type)*2 + 2), static_cast<long long>(arr[i]));} \
+    std::cout << std::endl;
+
+int main(){
+    int xs=0xFADE;
+    long long xl = 0xADE1A1DA;
+    long long xq = 0xC1A551F1AB1E;
+    float x1 = -8.0f/5.0f;
+    double x2 = -8.0/5.0;
+    int Ms[N]{xs,xs,xs,xs,xs};
+    long long Ml[N]{xl,xl,xl,xl,xl};
+    long long Mq[N]{xq,xq,xq,xq,xq};
+    float Mfs[N]{x1,x1,x1,x1,x1};
+    double Mfl[N]{x2,x2,x2,x2,x2};
+
+
+    PRINT_i(Ms,int);
+    PRINT_i(Ml,long long);
+    PRINT_i(Mq,long long);
+    PRINT_f(Mfs,float);
+    PRINT_f(Mfl,double);
+
+    return 0;
+}
+```
+>Ms in decimal: 64222 64222 64222 64222 64222 
+Ms in hex:     0x0000fade 0x0000fade 0x0000fade 0x0000fade 0x0000fade 
+
+
+>Ml in decimal: 2917245402 2917245402 2917245402 2917245402 2917245402 
+Ml in hex:     0x00000000ade1a1da 0x00000000ade1a1da 0x00000000ade1a1da 0x00000000ade1a1da 0x00000000ade1a1da 
+
+
+>Mq in decimal: 212915788557086 212915788557086 212915788557086 212915788557086 212915788557086 
+Mq in hex:     0x0000c1a551f1ab1e 0x0000c1a551f1ab1e 0x0000c1a551f1ab1e 0x0000c1a551f1ab1e 0x0000c1a551f1ab1e 
+
+
+>Mfs in decimal: -1.60 -1.60 -1.60 -1.60 -1.60 
+Mfs in exp:     -1.60e+00 -1.60e+00 -1.60e+00 -1.60e+00 -1.60e+00 
+
+
+>Mfl in decimal: -1.60 -1.60 -1.60 -1.60 -1.60 
+Mfl in exp:     -1.60e+00 -1.60e+00 -1.60e+00 -1.60e+00 -1.60e+00 
+
 ### Задание Л1.з5.
  Для одного из массивов 𝑀 (по варианту согласно табли-
 це Л1.3) выведите на экран адреса
@@ -107,6 +227,25 @@ float, double, long double, size_t, ptrdiff_t, void*.
 – следующего (с индексом 1) элемента массива — &(𝑀 [1]);
 при помощи функции libc 𝑝𝑟𝑖𝑛𝑡𝑓 () как указатели (формат 𝑝). Сравните полученные
 значения между собой и с размером элемента массива 𝑀 .
+
+```c++
+#include <iostream>
+
+#define N 5
+int main(){
+    unsigned int M[N]{0xADE1A1DA,0xADE1A1DA,0xADE1A1DA,0xADE1A1DA,0xADE1A1DA};
+    std::cout
+    <<"Адрес начала массива "<<&M
+    <<"\nАдрес нулевого элемента "<<&(M[0])
+    <<"\nАдрес первого элемента "<<&(M[1])
+    <<std::endl;
+
+    return 0;
+}
+```
+>Адрес начала массива 0x7fff5e3eb460
+Адрес нулевого элемента 0x7fff5e3eb460
+Адрес первого элемента 0x7fff5e3eb464
 ### Задание Л1.з6.
  Для каждого массива 𝑀 из пяти созданных введите с клавиа-
 туры новое значение элемента 𝑀 [𝑖], 𝑖 = 2 при помощи функции libc 𝑠𝑐𝑎𝑛𝑓 ().
