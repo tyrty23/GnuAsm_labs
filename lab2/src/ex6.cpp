@@ -39,18 +39,18 @@ int main(){
     void* p=reinterpret_cast<void *>(&a);
     print64(p);
 
-    std::cout<<"\nМаксимальное целое 32-битное значение без знака:"<<std::endl;
-    unsigned long long int b = 18446744073709551615;
+    std::cout<<"\nМаксимальное целое 64-битное значение без знака:"<<std::endl;
+    unsigned long long b = 18446744073709551615ULL;
     p=reinterpret_cast<void *>(&b);
     print64(p);
 
-    std::cout<<"\nМинимальное целое 32-битное значение со знаком:"<<std::endl;
-    long int c=-9223372036854775808;
+    std::cout<<"\nМинимальное целое 64-битное значение со знаком:"<<std::endl;
+    long long int c=-922337203685477580LL-1;
     p=reinterpret_cast<void *>(&c);
     print64(p);
 
-    std::cout<<"\nМаксимальное целое 32-битное значение со знаком:"<<std::endl;
-    long int d=9223372036854775807;
+    std::cout<<"\nМаксимальное целое 64-битное значение со знаком:"<<std::endl;
+    long long int d=9223372036854775807;
     p=reinterpret_cast<void *>(&d);
     print64(p);
 
