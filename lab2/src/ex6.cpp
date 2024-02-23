@@ -45,7 +45,7 @@ int main(){
     print64(p);
 
     std::cout<<"\nМинимальное целое 64-битное значение со знаком:"<<std::endl;
-    long long int c=-922337203685477580LL-1;
+    long long int c=-9223372036854775807LL-1;
     p=reinterpret_cast<void *>(&c);
     print64(p);
 
