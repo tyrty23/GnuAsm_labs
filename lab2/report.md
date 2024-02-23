@@ -44,6 +44,15 @@ int main(){
     return 0;
 }
 ```
+```
+address void *p is               0x7fff0012527f
+address char *p1 is              0x7fff0012527f
+address char *p1 +1 is           0x7fff00125280
+address unsigned short *p2 is    0x7fff0012527f
+address unsigned short *p2 +1 is 0x7fff00125281
+address double *p3 is            0x7fff0012527f
+address double *p3 +1 is         0x7fff00125287
+```
 ### Задание Л2.з2. 
 Разработайте функцию void 𝑝𝑟𝑖𝑛𝑡𝑃𝑜𝑖𝑛𝑡𝑒𝑟(void *𝑝), которая
 принимает нетипизированный указатель 𝑝, преобразует его в типизированные
@@ -95,6 +104,23 @@ int main(){
     
     return 0;
 }
+```
+```
+test value = 0x1122334455667788
+value of char *p1 is              �
+value of char *p1 +1 is           w
+value of unsigned short *p2 is    7788
+value of unsigned short *p2 +1 is 5566
+value of double *p3 is            3.84141e-226
+value of double *p3 +1 is         6.9532e-310
+
+test value = "0123456789abcdef"
+value of char *p1 is              �
+value of char *p1 +1 is           w
+value of unsigned short *p2 is    3130
+value of unsigned short *p2 +1 is 3332
+value of double *p3 is            9.95833e-43
+value of double *p3 +1 is         1.81795e+185
 ```
 ### Задание Л2.з3.
  Разработайте функцию void 𝑝𝑟𝑖𝑛𝑡𝐷𝑢𝑚𝑝(void * 𝑝, size_t 𝑁 ),
@@ -160,6 +186,14 @@ int main(){
 
     return 0;
 }
+```
+```
+item 1
+05 00 00 00 
+item 2
+05 00 00 00 FB FF FF FF 00 71 00 FF 
+item 3
+00 00 00 00 00 00 F8 3F 
 ```
 **Бонус +2 балла за платформу.** При подготовке к работе выполните измере-
 ния на платформе, где архитектура процессора отлична от x86/x86-64.
