@@ -17,8 +17,7 @@ int main(){
     std::cout<<"\n\nshort"<<std::endl;
     PRINT_i(Ms,short);
     asm(
-        "movw ax, 16;\n"
-        "movw %0, ax;\n"
+        "movw %0, 16;\n"
         : "=m" (Ms[2]) 
     );
     PRINT_i(Ms,short);
@@ -26,8 +25,7 @@ int main(){
     std::cout<<"\n\nint"<<std::endl;
     PRINT_i(Ml,int);
     asm(
-       "mov eax, 16;\n"
-        "mov %0, eax;\n"
+        "mov %0, 16;\n"
         : "=m" (Ml[2]) 
     );
     PRINT_i(Ml,int);
@@ -35,12 +33,13 @@ int main(){
     std::cout<<"\n\nlong long"<<std::endl;
     PRINT_i(Mq,long long);
     asm(
-        "movq rax, 16;\n"
-        "movq %0, rax;\n"
+        "movq %0, 16;\n"
         : "=m" (Mq[2]) 
     );
     PRINT_i(Mq,long long);
 
+
+    
     return 0;
 }
         
