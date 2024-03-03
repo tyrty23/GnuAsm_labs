@@ -12,6 +12,7 @@
 int main() {
     int xl = 0xADE1A1D;
     int Ml[N]{xl, xl, xl, xl, xl};
+    int x=8;
     size_t index = 2;
     int *base = Ml;
 
@@ -19,9 +20,10 @@ int main() {
     PRINT_i(Ml, int);
 
     asm volatile(
-        "movl $-1, (%0,%1,4)\n\t" // Store (-1) at M[i] where i = index
+        "movl %2, %%ecx\n\t"
+        "movl %%ecx, (%0,%1,4)\n\t" 
         : 
-        : "r"(base), "r"(index)
+        : "r"(base), "r"(index),"m"(x)
         : "eax", "ecx", "memory"
     );
 
