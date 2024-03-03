@@ -9,6 +9,8 @@ add_executable(ex1 src/ex1.cpp)
 add_executable(ex2 src/ex2.cpp)
 add_executable(ex3 src/ex3.cpp)
 add_executable(ex4 src/ex4.cpp)
+add_executable(ex5 src/ex5.cpp)
+
 
 
 
