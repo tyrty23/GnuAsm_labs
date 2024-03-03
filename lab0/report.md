@@ -7,26 +7,26 @@
 представлены в папке «labs-files/Файлы в разных форматах»). Выделите сигнатуры
 или иные признаки формата там, где это возможно.
 
-> 
-   * 
-    ![](pic/wav_b.png){Для файла beep.wav}
+
+* 
+![](pic/wav_b.png){Для файла beep.wav}
 
 
 
-    * 
-    ![](pic/pdf_b.png)
-    ![](pic/pdf_e.png){Для файла chess16.pdf}
+* 
+![](pic/pdf_b.png)
+![](pic/pdf_e.png){Для файла chess16.pdf}
 
 
 
-    * 
-    ![](pic/png_full.png){Для файла chess16.png}
+* 
+![](pic/png_full.png){Для файла chess16.png}
 
 
 
-    * 
-    ![](pic/jpg_b.png)
-    ![](pic/jpg_e.png){Для файла chess16.jpg}
+* 
+![](pic/jpg_b.png)
+![](pic/jpg_e.png){Для файла chess16.jpg}
 
 
 
