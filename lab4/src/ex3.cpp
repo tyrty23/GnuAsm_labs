@@ -10,24 +10,22 @@
     std::cout << std::endl;
 
 int main() {
-    int xl = 0xADE1A1D;
-    int Ml[N]{xl, xl, xl, xl, xl};
+    long long xq = 0xC1A551F1AB1E;
+    long long Mq[N]{xq,xq,xq,xq,xq};
     size_t index = 2;
-    int *base = Ml;
+    long long *base = Mq;
 
     std::cout << "\n\nint" << std::endl;
-    PRINT_i(Ml, int);
+    PRINT_i(Mq, long long);
 
-    asm volatile(
-        "mov %0, %%rax\n\t"         // Move the base address into register %rax
-        "mov %1, %%rcx\n\t"         // Move the index into register %rcx
-        "movl $-1, (%%rax,%%rcx,4)\n\t" // Store (-1) at M[i] where i = index
+    asm volatile(    
+        "movb $0xBB, 0x3(%0,%1,8)\n\t" // Store (-1) at M[i] where i = index
         : 
         : "r"(base), "r"(index)
         : "rax", "rcx", "memory"
     );
 
-    PRINT_i(Ml, int);
+    PRINT_i(Mq, long long);
 
     return 0;
 }

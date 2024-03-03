@@ -3,9 +3,14 @@ project(MyProject)
 include_directories(include)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED on)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -masm=intel -Wextra -Werror ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall  -Wextra -Werror ")
 add_executable(ex1 src/ex1.cpp)
+
 add_executable(ex2 src/ex2.cpp)
+add_executable(ex3 src/ex3.cpp)
+add_executable(ex4 src/ex4.cpp)
+
+
 
 
 

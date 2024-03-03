@@ -16,24 +16,24 @@ int main(){
 
     std::cout<<"\n\nshort"<<std::endl;
     PRINT_i(Ms,short);
-    asm(
-        "movw %0, 16;\n"
+    asm volatile(
+        "movw $16, %0;\n"
         : "=m" (Ms[2]) 
     );
     PRINT_i(Ms,short);
 
     std::cout<<"\n\nint"<<std::endl;
     PRINT_i(Ml,int);
-    asm(
-        "mov %0, 16;\n"
+    asm volatile(
+        "movl $16, %0;\n"
         : "=m" (Ml[2]) 
     );
     PRINT_i(Ml,int);
 
     std::cout<<"\n\nlong long"<<std::endl;
     PRINT_i(Mq,long long);
-    asm(
-        "movq %0, 16;\n"
+    asm volatile( 
+        "movq $16, %0;\n"
         : "=m" (Mq[2]) 
     );
     PRINT_i(Mq,long long);
