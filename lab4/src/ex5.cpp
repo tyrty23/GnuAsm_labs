@@ -24,7 +24,7 @@ int main() {
         "movl %2, %%ecx\n\t"
         "movl %%ecx, (%0,%1,4)\n\t" 
         : 
-        : "r"(base), "r"(index),"m"(x_)
+        : "r"(base), "r"(index),"m"(*x_)//костыли наше всё (надо бы исправить)
         : "eax", "ecx", "memory"
     );
 
