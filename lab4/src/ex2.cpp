@@ -19,10 +19,9 @@ int main() {
     PRINT_i(Ml, int);
 
     asm volatile(
-        "movl $-1, (%0,%1,4)\n\t" // Store (-1) at M[i] where i = index
+        "movl $-1, (%0,%1,4)\n\t" 
         : 
         : "r"(base), "r"(index)
-        : "eax", "ecx", "memory"
     );
 
     PRINT_i(Ml, int);

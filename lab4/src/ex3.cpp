@@ -19,10 +19,10 @@ int main() {
     PRINT_i(Mq, long long);
 
     asm volatile(    
-        "movb $0xBB, 0x3(%0,%1,8)\n\t" // Store (-1) at M[i] where i = index
+        "movb $0xBB, 0x3(%0,%1,8)\n\t"
         : 
         : "r"(base), "r"(index)
-        : "rax", "rcx", "memory"
+        : 
     );
 
     PRINT_i(Mq, long long);

@@ -86,10 +86,10 @@ int main() {
     PRINT_i(Ml, int);
 
     asm volatile(
-        "movl $-1, (%0,%1,4)\n\t" // Store (-1) at M[i] where i = index
+        "movl $-1, (%0,%1,4)\n\t" 
         : 
         : "r"(base), "r"(index)
-        : "eax", "ecx", "memory"
+        :
     );
 
     PRINT_i(Ml, int);
@@ -124,10 +124,10 @@ int main() {
     PRINT_i(Mq, long long);
 
     asm volatile(    
-        "movb $0xBB, 0x3(%0,%1,8)\n\t" // Store (-1) at M[i] where i = index
+        "movb $0xBB, 0x3(%0,%1,8)\n\t" 
         : 
         : "r"(base), "r"(index)
-        : "rax", "rcx", "memory"
+        : 
     );
 
     PRINT_i(Mq, long long);
@@ -169,7 +169,7 @@ int main() {
         "movl %%ecx, (%0,%1,4)\n\t" 
         : 
         : "r"(base), "r"(index),"m"(x)
-        : "eax", "ecx", "memory"
+        : "ecx", "memory"
     );
 
     PRINT_i(Ml, int);
