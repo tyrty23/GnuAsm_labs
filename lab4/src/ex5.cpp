@@ -12,20 +12,19 @@
 int main() {
     int xl = 0xADE1A1D;
     int Ml[N]{xl, xl, xl, xl, xl};
-    int x=8;
+    int x = 8;
     size_t index = 2;
     int *base = Ml;
-    int * x_=&x;
 
     std::cout << "\n\nint" << std::endl;
     PRINT_i(Ml, int);
 
     asm volatile(
-        "movl %2, %%ecx\n\t"
+        "movl (%2), %%ecx\n\t"
         "movl %%ecx, (%0,%1,4)\n\t" 
         : 
-        : "r"(base), "r"(index),"m"(*x_)//костыли наше всё (надо бы исправить)
-        : "eax", "ecx", "memory"
+        : "r"(base), "r"(index), "r"(&x) 
+        : "ecx", "memory"
     );
 
     PRINT_i(Ml, int);
