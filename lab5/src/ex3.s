@@ -8,7 +8,7 @@
 .section .text
     .globl _start
 
-    .extern atan2
+    .extern pow
 
 _start:
     # Вывод x и y
@@ -20,7 +20,7 @@ _start:
     # Вычисление результата (атангенса)
     movsd x(%rip), %xmm0        # загрузка x в регистр xmm0
     movsd y(%rip), %xmm1        # загрузка y в регистр xmm1
-    call atan2                  # вызов функции atan2()
+    call pow                    # вызов функции atan2()
     movsd %xmm0, result(%rip)   # сохранение результата в переменной result
 
     # Вывод результата
